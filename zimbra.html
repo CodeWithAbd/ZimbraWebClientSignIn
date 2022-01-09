@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zimba Web Client Sign In</title>
+
+    <link rel="icon" href="images/Zicon.ico">
+</head>
+<style type="text/css">
+    tr {
+        display: table-row;
+        vertical-align: inherit;
+        border-color: inherit;
+    }
+
+    * {
+        margin: 0%;
+        padding: 0%;
+        font-family: 'Helvetica Neue', Helvetica, Arial, 'Liberation Sans', sans-serif;
+        z-index: 1;
+
+    }
+
+    #container-1 {
+        margin: 0 auto;
+        width: 100000;
+        height: 720px;
+        z-index: 2;
+        background-image: -webkit-linear-gradient(top, #fff, #ededed);
+        background-color: #ededed;
+    }
+
+    #container-2 {
+        width: 500px;
+        height: 315px;
+        margin-top: 215px;
+        margin-bottom: 0px;
+        margin-left: 710px;
+        background-color: #007CC3;
+        z-index: 3;
+        box-shadow: 5px 5px 15px #999;
+        border-radius: 3px;
+        border-style: hidden;
+        overflow: visible;
+    }
+
+    #zBanner {
+        padding-top: 30px;
+        padding-left: 30px;
+    }
+
+    #usr-1 {
+        padding-top: 21px;
+        padding-left: 90px;
+        width: 59.69px;
+        height: 14px;
+        font-size: 75%;
+        color: white;
+
+    }
+
+    #usr-2 {
+        margin-top: 22px;
+        margin-left: 18px;
+        width: 234px;
+        height: 20px;
+        border: 1px solid #FFF;
+        border-radius: 5px;
+        font-size: 125%;
+        background-color: #E8F0FE;
+    }
+
+    #pass-1 {
+        padding-top: 8px;
+        padding-left: 90px;
+        width: 56.03px;
+        height: 14px;
+        font-size: 75%;
+        color: white;
+
+    }
+
+    #pass-2 {
+        margin-top: 8px;
+        margin-left: 18px;
+        width: 234px;
+        height: 20px;
+        border: 1px solid #FFF;
+        border-radius: 5px;
+        background-color: #E8F0FE;
+    }
+
+    #signBox {
+        color: white;
+        border: 1px white solid;
+        border-radius: 4px;
+        height: 25px;
+        margin-top: 5px;
+        position: relative;
+        left: 173px;
+
+    }
+
+    #signIn {
+        color: white;
+        font-size: 75%;
+        position: relative;
+        top: 2.9px;
+        left: 40.5px;
+    }
+
+    #login {
+        background-color: #007CC3;
+        border: 0.5px white solid;
+        border-radius: 3px;
+        color: white;
+        width: 51.36px;
+        height: 24px;
+        font-size: 75%;
+        font-family: 'Helvetica Neue', Helvetica, Arial, 'Liberation Sans', sans-serif;
+        cursor: pointer;
+        appearance: auto;
+        position: relative;
+        left: -52px;
+        top: 3px;
+    }
+
+    #line {
+        width: 315px;
+        position: relative;
+        left: 90px;
+        top: 10px;
+        border-top: 1px;
+    }
+
+    #type {
+        color: white;
+        font-size: 75%;
+        position: relative;
+        top: 28px;
+        left: 90px;
+    }
+
+    #options {
+        position: relative;
+        width: 165px;
+        height: 20px;
+        left: 106px;
+        top: 27px;
+        font-size: 75%;
+        box-shadow: 5px 5px 15px #999;
+    }
+
+    #link {
+        text-decoration: none;
+        font-size: 70%;
+        color: white;
+        position: relative;
+        left: 342px;
+        top: 5px;
+    }
+
+
+    #link:hover {
+        text-decoration: underline;
+    }
+
+    #footer {
+        text-align: center;
+        color: #656565;
+        position: relative;
+        top: 370px;
+        font-size: 75%;
+
+    }
+
+    #footer-2 {
+        position: relative;
+        top: 4px;
+        text-align: justify;
+    }
+</style>
+
+<body>
+    <div>
+
+        <div id="container-1">
+
+            <div id="container-2">
+                <div id="Z-logo">
+
+                    <a href="https://www.zimbra.com/"><img src="Z-Banner.png" id="zBanner"></a>
+                </div>
+
+                <div>
+                    <form>
+                        <table>
+                            <tr>
+                                <td id="usr-1"><label for="usr-2"> Username: </label></td>
+                                <td><input type="text" id="usr-2" value="" size="40" maxlength="1024"
+                                        autocapitalize="off" autocorrect="off"></td>
+                            </tr>
+                            <tr>
+                                <td id="pass-1"><label for="pass-2">Password:</label></td>
+                                <td><input type="password" id="pass-2" autocomplete="off" value="" size="40"
+                                        maxlength="1024"></td>
+                            </tr>
+
+                            <tr>
+                                <td><input type="checkbox" id="signBox">
+                                <td id="signIn"><label for="signBox">Stay signed in</label></td>
+                                <td><input id="login" type="submit" value="Sign in"></td>
+
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+                <div>
+                    <hr id="line">
+                </div>
+
+                <div>
+
+                    <table>
+                        <form>
+                            <tr>
+                                <td id="type"><label for="options">Version:</label></td>
+                                <td>
+                                    <select id="options">
+                                        <option selected>Default</option>
+                                        <option>Advanced (Ajax)</option>
+                                        <option>Standard (HTML)</option>
+                                        <option>Mobile</option>
+                                    </select>
+                                </td>
+                            <tr>
+                                <td><a id="link" href="projectPrac.html">What's This?</a></td>
+                            </tr>
+                            </tr>
+                        </form>
+                    </table>
+                </div>
+
+            </div>
+
+            <div>
+                <p id="footer">Zimbra :: the leader in open source messaging and collaboration :: Blog - Wiki - Forums
+                    <br>
+                    <span id=footer-2> Copyright © 2005-2017 Synacor, Inc. All rights reserved. "Zimbra" is a registered trademark of
+                    Synacor, Inc</span></p>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
